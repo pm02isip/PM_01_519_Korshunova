@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB7044A6-59E8-4A0E-B6F3-8789A4A09171}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PM_01_519_Korshunova</RootNamespace>
+    <AssemblyName>PM_01_519_Korshunova</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Activity.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="City.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseConnection.cs" />
+    <Compile Include="Event.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Jury.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Moderator.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Organizers.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Add_Event_Activity.xaml.cs">
+      <DependentUpon>Add_Event_Activity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Main_system_window.xaml.cs">
+      <DependentUpon>Main_system_window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Event_Organizers.xaml.cs">
+      <DependentUpon>Page_Event_Organizers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_info_events.xaml.cs">
+      <DependentUpon>Page_info_events.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Participants.xaml.cs">
+      <DependentUpon>Page_Participants.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Participants.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\Add_Event_Activity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AuthPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Main_system_window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page_Event_Organizers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page_info_events.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page_Jury.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page_Moderator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page_My_Profile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page_Organizers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page_Participants.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pages\AuthPage.xaml.cs">
+      <DependentUpon>AuthPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Jury.xaml.cs">
+      <DependentUpon>Page_Jury.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Moderator.xaml.cs">
+      <DependentUpon>Page_Moderator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_My_Profile.xaml.cs">
+      <DependentUpon>Page_My_Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Organizers.xaml.cs">
+      <DependentUpon>Page_Organizers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Participants_image\foto1.jpg" />
+    <Resource Include="Images\Participants_image\foto10.jpg" />
+    <Resource Include="Images\Participants_image\foto11.jpg" />
+    <Resource Include="Images\Participants_image\foto12.jpg" />
+    <Resource Include="Images\Participants_image\foto13.jpg" />
+    <Resource Include="Images\Participants_image\foto14.jpg" />
+    <Resource Include="Images\Participants_image\foto15.jpg" />
+    <Resource Include="Images\Participants_image\foto16.jpg" />
+    <Resource Include="Images\Participants_image\foto17.jpg" />
+    <Resource Include="Images\Participants_image\foto18.jpg" />
+    <Resource Include="Images\Participants_image\foto19.jpg" />
+    <Resource Include="Images\Participants_image\foto2.jpg" />
+    <Resource Include="Images\Participants_image\foto20.jpg" />
+    <Resource Include="Images\Participants_image\foto21.jpg" />
+    <Resource Include="Images\Participants_image\foto22.jpg" />
+    <Resource Include="Images\Participants_image\foto23.jpg" />
+    <Resource Include="Images\Participants_image\foto24.jpg" />
+    <Resource Include="Images\Participants_image\foto25.jpg" />
+    <Resource Include="Images\Participants_image\foto26.jpg" />
+    <Resource Include="Images\Participants_image\foto27.jpg" />
+    <Resource Include="Images\Participants_image\foto28.jpg" />
+    <Resource Include="Images\Participants_image\foto29.jpg" />
+    <Resource Include="Images\Participants_image\foto3.jpg" />
+    <Resource Include="Images\Participants_image\foto30.jpg" />
+    <Resource Include="Images\Participants_image\foto31.jpg" />
+    <Resource Include="Images\Participants_image\foto32.jpg" />
+    <Resource Include="Images\Participants_image\foto33.jpg" />
+    <Resource Include="Images\Participants_image\foto34.jpg" />
+    <Resource Include="Images\Participants_image\foto35.jpg" />
+    <Resource Include="Images\Participants_image\foto36.jpg" />
+    <Resource Include="Images\Participants_image\foto37.jpg" />
+    <Resource Include="Images\Participants_image\foto38.jpg" />
+    <Resource Include="Images\Participants_image\foto39.jpg" />
+    <Resource Include="Images\Participants_image\foto4.jpg" />
+    <Resource Include="Images\Participants_image\foto40.jpg" />
+    <Resource Include="Images\Participants_image\foto41.jpg" />
+    <Resource Include="Images\Participants_image\foto42.jpg" />
+    <Resource Include="Images\Participants_image\foto43.jpg" />
+    <Resource Include="Images\Participants_image\foto44.jpg" />
+    <Resource Include="Images\Participants_image\foto45.jpg" />
+    <Resource Include="Images\Participants_image\foto46.jpg" />
+    <Resource Include="Images\Participants_image\foto47.jpg" />
+    <Resource Include="Images\Participants_image\foto48.jpg" />
+    <Resource Include="Images\Participants_image\foto49.jpg" />
+    <Resource Include="Images\Participants_image\foto5.jpg" />
+    <Resource Include="Images\Participants_image\foto50.jpg" />
+    <Resource Include="Images\Participants_image\foto51.jpg" />
+    <Resource Include="Images\Participants_image\foto52.jpg" />
+    <Resource Include="Images\Participants_image\foto53.jpg" />
+    <Resource Include="Images\Participants_image\foto54.jpg" />
+    <Resource Include="Images\Participants_image\foto55.jpg" />
+    <Resource Include="Images\Participants_image\foto56.jpg" />
+    <Resource Include="Images\Participants_image\foto57.jpg" />
+    <Resource Include="Images\Participants_image\foto58.jpg" />
+    <Resource Include="Images\Participants_image\foto59.jpg" />
+    <Resource Include="Images\Participants_image\foto6.jpg" />
+    <Resource Include="Images\Participants_image\foto60.jpg" />
+    <Resource Include="Images\Participants_image\foto61.jpg" />
+    <Resource Include="Images\Participants_image\foto62.jpg" />
+    <Resource Include="Images\Participants_image\foto63.jpg" />
+    <Resource Include="Images\Participants_image\foto64.jpg" />
+    <Resource Include="Images\Participants_image\foto65.jpg" />
+    <Resource Include="Images\Participants_image\foto66.jpg" />
+    <Resource Include="Images\Participants_image\foto67.jpg" />
+    <Resource Include="Images\Participants_image\foto68.jpg" />
+    <Resource Include="Images\Participants_image\foto69.jpg" />
+    <Resource Include="Images\Participants_image\foto7.jpg" />
+    <Resource Include="Images\Participants_image\foto70.jpg" />
+    <Resource Include="Images\Participants_image\foto8.jpg" />
+    <Resource Include="Images\Participants_image\foto9.jpg" />
+    <Resource Include="Images\Organizer_image\foto1.jpg" />
+    <Resource Include="Images\Organizer_image\foto10.jpg" />
+    <Resource Include="Images\Organizer_image\foto2.jpg" />
+    <Resource Include="Images\Organizer_image\foto3.jpg" />
+    <Resource Include="Images\Organizer_image\foto4.jpg" />
+    <Resource Include="Images\Organizer_image\foto5.jpg" />
+    <Resource Include="Images\Organizer_image\foto7.jpg" />
+    <Resource Include="Images\Organizer_image\foto8.jpg" />
+    <Resource Include="Images\Organizer_image\foto9.jpg" />
+    <Resource Include="Images\Moderator_image\foto10.jpg" />
+    <Resource Include="Images\Moderator_image\foto11.jpg" />
+    <Resource Include="Images\Moderator_image\foto12.jpg" />
+    <Resource Include="Images\Moderator_image\foto13.jpg" />
+    <Resource Include="Images\Moderator_image\foto14.jpg" />
+    <Resource Include="Images\Moderator_image\foto15.jpg" />
+    <Resource Include="Images\Moderator_image\foto16.jpg" />
+    <Resource Include="Images\Moderator_image\foto17.jpg" />
+    <Resource Include="Images\Moderator_image\foto18.jpg" />
+    <Resource Include="Images\Moderator_image\foto19.jpg" />
+    <Resource Include="Images\Moderator_image\foto20.jpg" />
+    <Resource Include="Images\Moderator_image\foto21.jpg" />
+    <Resource Include="Images\Moderator_image\foto22.jpg" />
+    <Resource Include="Images\Moderator_image\foto23.jpg" />
+    <Resource Include="Images\Moderator_image\foto24.jpg" />
+    <Resource Include="Images\Moderator_image\foto25.jpg" />
+    <Resource Include="Images\Moderator_image\foto26.jpg" />
+    <Resource Include="Images\Moderator_image\foto27.jpg" />
+    <Resource Include="Images\Moderator_image\foto28.jpg" />
+    <Resource Include="Images\Moderator_image\foto29.jpg" />
+    <Resource Include="Images\Moderator_image\foto8.jpg" />
+    <Resource Include="Images\Moderator_image\foto9.jpg" />
+    <Resource Include="Images\Jury_image\foto1.jpg" />
+    <Resource Include="Images\Jury_image\foto10.jpg" />
+    <Resource Include="Images\Jury_image\foto11.jpg" />
+    <Resource Include="Images\Jury_image\foto12.jpg" />
+    <Resource Include="Images\Jury_image\foto13.jpg" />
+    <Resource Include="Images\Jury_image\foto14.jpg" />
+    <Resource Include="Images\Jury_image\foto15.jpg" />
+    <Resource Include="Images\Jury_image\foto16.jpg" />
+    <Resource Include="Images\Jury_image\foto17.jpg" />
+    <Resource Include="Images\Jury_image\foto18.jpg" />
+    <Resource Include="Images\Jury_image\foto19.jpg" />
+    <Resource Include="Images\Jury_image\foto2.jpg" />
+    <Resource Include="Images\Jury_image\foto20.jpg" />
+    <Resource Include="Images\Jury_image\foto21.jpg" />
+    <Resource Include="Images\Jury_image\foto22.jpg" />
+    <Resource Include="Images\Jury_image\foto23.jpg" />
+    <Resource Include="Images\Jury_image\foto24.jpg" />
+    <Resource Include="Images\Jury_image\foto25.jpg" />
+    <Resource Include="Images\Jury_image\foto26.jpg" />
+    <Resource Include="Images\Jury_image\foto27.jpg" />
+    <Resource Include="Images\Jury_image\foto28.jpg" />
+    <Resource Include="Images\Jury_image\foto29.jpg" />
+    <Resource Include="Images\Jury_image\foto3.jpg" />
+    <Resource Include="Images\Jury_image\foto30.jpg" />
+    <Resource Include="Images\Jury_image\foto4.jpg" />
+    <Resource Include="Images\Jury_image\foto5.jpg" />
+    <Resource Include="Images\Jury_image\foto6.jpg" />
+    <Resource Include="Images\Jury_image\foto7.jpg" />
+    <Resource Include="Images\Jury_image\foto8.jpg" />
+    <Resource Include="Images\Jury_image\foto9.jpg" />
+    <Resource Include="Images\image\1.jpeg" />
+    <Resource Include="Images\image\10.jpg" />
+    <Resource Include="Images\image\11.jpg" />
+    <Resource Include="Images\image\12.jpg" />
+    <Resource Include="Images\image\13.jpg" />
+    <Resource Include="Images\image\14.png" />
+    <Resource Include="Images\image\15.jpg" />
+    <Resource Include="Images\image\16.jpg" />
+    <Resource Include="Images\image\17.jpg" />
+    <Resource Include="Images\image\18.jpeg" />
+    <Resource Include="Images\image\19.jpg" />
+    <Resource Include="Images\image\2.jpeg" />
+    <Resource Include="Images\image\20.jpg" />
+    <Resource Include="Images\image\3.jpeg" />
+    <Resource Include="Images\image\4.jpeg" />
+    <Resource Include="Images\image\5.png" />
+    <Resource Include="Images\image\6.jpg" />
+    <Resource Include="Images\image\7.jpg" />
+    <Resource Include="Images\image\8.jpeg" />
+    <Resource Include="Images\image\9.jpg" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

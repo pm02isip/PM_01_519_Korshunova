@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c258f9949f9a43589dc7e2e19a86f19a" Name="Diagram1">
+        <EntityTypeShape EntityType="PM_01_519_KorshunovaModel.Activity" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_01_519_KorshunovaModel.City" Width="1.5" PointX="3" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_01_519_KorshunovaModel.Country" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_01_519_KorshunovaModel.Event" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_01_519_KorshunovaModel.Jury" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_01_519_KorshunovaModel.Moderator" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_01_519_KorshunovaModel.Organizers" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_01_519_KorshunovaModel.Participants" Width="1.5" PointX="3" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_01_519_KorshunovaModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="PM_01_519_KorshunovaModel.FK_Activity_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="PM_01_519_KorshunovaModel.FK_Activity_Jury" ManuallyRouted="false" />
+        <AssociationConnector Association="PM_01_519_KorshunovaModel.FK_Activity_Moderator" ManuallyRouted="false" />
+        <AssociationConnector Association="PM_01_519_KorshunovaModel.FK_Event_City" ManuallyRouted="false" />
+        <AssociationConnector Association="PM_01_519_KorshunovaModel.FK_Jury_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="PM_01_519_KorshunovaModel.FK_Moderator_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="PM_01_519_KorshunovaModel.FK_Organizers_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="PM_01_519_KorshunovaModel.FK_Participants_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="PM_01_519_KorshunovaModel.FK_Event_Organizers" ManuallyRouted="false" />
+        <AssociationConnector Association="PM_01_519_KorshunovaModel.FK_Event_Participants" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

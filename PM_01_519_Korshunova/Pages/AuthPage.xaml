@@ -1,0 +1,50 @@
+﻿<Page x:Class="PM_01_519_Korshunova.Pages.AuthPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PM_01_519_Korshunova.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AuthPage">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <TextBlock x:Name="textlog" Text="IdNumber:" HorizontalAlignment="Right" FontSize="14" Height="20" Margin="10"/>
+            <TextBlock x:Name="textPass" Text="Password:" HorizontalAlignment="Right" FontSize="14" Height="20" Margin="10"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBox x:Name="Log" Height="20" Margin="10" Width="180"/>
+            <PasswordBox x:Name="Pass" Height="20" Margin="10" Width="180"/>
+            <Button x:Name="Reg" Content="Вход" Margin="10" Height="20"  Width="180" Click="Reg_Click"/>
+        </StackPanel>
+
+        <Grid x:Name="GridKapcha" Visibility="Hidden" Grid.RowSpan="3" Grid.ColumnSpan="3" Background="White">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Kapcha" TextAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="Text_Kapcha" Height="20" Width="200" FontSize="14" TextAlignment="Center" Margin="10" FontFamily="Algerian"/>
+                <TextBox x:Name="UserText_kapcha" Height="20" Width="200" Margin="10"/>
+                <Button x:Name="but1" Height="20" Width="200" Margin="10" Content="Проверить" Click="but1_Click"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="GridTimer" Background="White" Grid.ColumnSpan="3" Grid.RowSpan="3" Visibility="Hidden" Opacity="0.9">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Таймер"/>
+                <TextBlock x:Name="numerTime" Margin="5" TextAlignment="Center" Opacity="1"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
